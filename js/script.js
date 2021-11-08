@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => { //событие боаузер загрузил html и dom
-    const tabs = document.querySelectorAll('.tabheader__items'),
+    const tabs = document.querySelectorAll('.tabheader__item'),
           tabsContent = document.querySelectorAll('.tabcontent'),
            tabsParent = document.querySelector('.tabheader__items');
     console.log(tabs);
@@ -30,8 +30,10 @@ window.addEventListener('DOMContentLoaded', () => { //событие боауз�
 
 
         if (target && target.classList.contains('tabheader__item'))  {
-            console.log(123);
+            
             tabs.forEach((item, i) => {
+                console.log('target', target);
+                console.log('item', item);
                 if (target == item) {
                     hideTabContent();
                     showTabContent(i);
